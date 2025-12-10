@@ -1,2 +1,7 @@
 # Store-Sales-TSF
-End-to-end Time Series Forecasting pipeline for supermarket sales, covering EDA, data processing, and advanced Machine Learning models.
+
+This project successfully tackled the Kaggle Store Sales - Time Series Forecasting challenge, aiming to predict daily sales for 54 Ecuadorian stores. The core of the solution was a robust modeling system built upon high-performance Gradient Boosting algorithms, specifically XGBoost and LightGBM. The model's foundation involved extensive data preparation, including cleaning missing records across the entire dataset and implementing an advanced Feature Engineering phase to capture the sequential and seasonal nature of the sales data.
+
+The feature engineering process was critical, involving the creation of lags (past values) and moving averages (trends) for both the target sales variable and all related features that influence the time series prediction. This paved the way for the final stage, which utilized a Weighted Ensemble strategy to combine the predictions of the optimized XGBoost and LightGBM models. Hyperparameter tuning was performed through a customized grid search, resulting in an ensemble that weighted XGBoost more heavily due to its superior performance on validation data.
+
+The final highly accurate prediction was generated after re-training the best models on the entire available dataset using a Refit Strategy, maximizing their learning potential. This comprehensive approach successfully resolved the forecasting challenge and achieved a remarkable result, placing the solution within the Top 5% of the final Kaggle competition leaderboard.
